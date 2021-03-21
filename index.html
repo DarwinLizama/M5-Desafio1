@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Desafio 1</title>
+</head>
+<body class="text-center">
+
+    <div id="usertable" class="p-3 mb-2 bg-secondary text-white">
+        
+        <h1 >Tabla de Usuarios</h1>
+        <table class="table table-dark table-sm table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Run</th>
+                <th scope="col">Nacimiento</th>
+                <th scope="col">Edad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>{{personas[0].nombre}}</td>
+                <td>{{personas[0].apellido}}</td>
+                <td>{{personas[0].run}}</td>
+                <td>{{personas[0].fecha}}</td>
+                <td>{{personas[0].edad}}</td>
+                
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>{{personas[1].nombre}}</td>
+                <td>{{personas[1].apellido}}</td>
+                <td>{{personas[1].run}}</td>
+                <td>{{personas[1].fecha}}</td>
+                <td>{{personas[1].edad}}</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>{{personas[2].nombre}}</td>
+                <td>{{personas[2].apellido}}</td>
+                <td>{{personas[2].run}}</td>
+                <td>{{personas[2].fecha}}</td>
+                <td>{{personas[2].edad}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+
+    <script>
+        let app = new Vue({
+
+            el : '#usertable',
+            data() {
+                return {
+                    personas:[
+                        {nombre:"Darwin", apellido:"Lizama", run:"16.204.296-3",fecha:"19-09-1985", edad:"35"},
+                        {nombre:"Cecilia", apellido:"Carrasco", run:"21.894.221-0",fecha:"31-07-1996", edad:"23"},
+                        {nombre:"Andres", apellido:"Gamal",run:"17.021.315-7", fecha:"01-03-1969", edad:"40"}
+                    ]
+                
+            }
+        },
+        });
+
+    </script>
+</body>
+</html>
